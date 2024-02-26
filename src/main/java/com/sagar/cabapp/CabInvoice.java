@@ -9,6 +9,7 @@ public class CabInvoice {
         double res=totalFare(2,5);
         System.out.println(res);
         System.out.println(multiplerides(2,5,5));
+        System.out.println(enhancedInvoice(2,5,5));
     }
 
     public static double totalFare(double dist, int time) {
@@ -31,4 +32,9 @@ public class CabInvoice {
         }
     }
 
+    public static double enhancedInvoice(double dist, int time, int rides){
+        double res=(dist*perKm + time*perMin)*rides;
+        double avg=res/rides;
+        return avg;
+    }
 }
