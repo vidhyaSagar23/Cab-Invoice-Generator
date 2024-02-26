@@ -11,12 +11,19 @@ public class CabInvoiceTest {
         double distnace =2;
         int time =5;
         int actual = (int) cabInvoice.totalFare(distnace,time);
-        Assert.assertEquals(20,actual);
+        Assert.assertEquals(25,actual);
     }
 
     @Test
     public void multipleRides(){
         CabInvoice cabInvoice = new CabInvoice();
-        Assert.assertEquals(125,(int)cabInvoice.multiplerides(2,5,50));
+        Assert.assertEquals(125,(int)cabInvoice.multiplerides(2,5,5));
+    }
+    @Test
+    public void enhancedInvoive()
+    {
+        CabInvoice cabInvoice = new CabInvoice();
+        Assert.assertEquals(25,(int)cabInvoice.enhancedInvoice(2,5,50));
+
     }
 }

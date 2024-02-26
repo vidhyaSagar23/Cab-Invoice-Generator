@@ -8,7 +8,7 @@ public class CabInvoice {
     public static void main(String[] args) {
         double res=totalFare(2,5);
         System.out.println(res);
-        System.out.println(multiplerides(2,5,5));
+        System.out.println(multiplerides(2,5,5 ));
         System.out.println(enhancedInvoice(2,5,5));
     }
 
