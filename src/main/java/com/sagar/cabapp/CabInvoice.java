@@ -10,7 +10,7 @@ public class CabInvoice {
         System.out.println(res);
     }
 
-    private static double totalFare(int dist, int time) {
+    public static double totalFare(double dist, int time) {
         double res=dist*perKm + time*perMin;
         if(res>minFare){
             return res;
