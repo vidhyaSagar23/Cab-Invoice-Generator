@@ -1,6 +1,9 @@
 package com.sagar.cabapp;
 
 
+import java.util.HashMap;
+import java.util.Scanner;
+
 public class CabInvoice {
     static double perKm=10;
     static double perMin=1;
@@ -10,6 +13,7 @@ public class CabInvoice {
         System.out.println(res);
         System.out.println(multiplerides(2,5,5 ));
         System.out.println(enhancedInvoice(2,5,5));
+        System.out.println(invoiceService(2,5,5));
     }
 
     public static double totalFare(double dist, int time) {
@@ -36,5 +40,17 @@ public class CabInvoice {
         double res=(dist*perKm + time*perMin)*rides;
         double avg=res/rides;
         return avg;
+    }
+    public static double invoiceService(double dist, int time, int id)
+    {
+        HashMap<Integer,Integer> map = new HashMap<>();
+        map.put(1,5);
+        map.put(2,4);
+        map.put(5,3);
+        double res=0;
+        if(map.containsKey(id)){
+             res=(dist*perKm + time*perMin)*map.get(id);
+        }
+        return res;
     }
 }
