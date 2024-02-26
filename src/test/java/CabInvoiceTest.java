@@ -20,7 +20,7 @@ public class CabInvoiceTest {
         Assert.assertEquals(125,(int)cabInvoice.multiplerides(2,5,5));
     }
     @Test
-    public void enhancedInvoive()
+    public void enhancedInvoice()
     {
         CabInvoice cabInvoice = new CabInvoice();
         Assert.assertEquals(25,(int)cabInvoice.enhancedInvoice(2,5,50));
