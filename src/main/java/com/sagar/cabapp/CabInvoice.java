@@ -14,6 +14,7 @@ public class CabInvoice {
         System.out.println(multiplerides(2,5,5 ));
         System.out.println(enhancedInvoice(2,5,5));
         System.out.println(invoiceService(2,5,5));
+        System.out.println(premiumRides("premium",2,5));
     }
 
     public static double totalFare(double dist, int time) {
@@ -52,5 +53,32 @@ public class CabInvoice {
              res=(dist*perKm + time*perMin)*map.get(id);
         }
         return res;
+    }
+
+    public static double premiumRides(String category,int dist,int min){
+        if (category.equalsIgnoreCase("normal")){
+            int minFare=5;
+            int fare=10;
+            int time=1;
+            double res=dist*fare + time*min;
+            if (res>minFare){
+                return res;
+            }
+            else{
+                return minFare;
+            }
+        }
+        else{
+            int minFare=20;
+            int fare=15;
+            int time=2;
+            double res=dist*fare + time*min;
+            if (res>minFare){
+                return res;
+            }
+            else{
+                return minFare;
+            }
+        }
     }
 }
