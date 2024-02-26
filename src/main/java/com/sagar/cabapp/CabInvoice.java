@@ -8,10 +8,21 @@ public class CabInvoice {
     public static void main(String[] args) {
         double res=totalFare(2,5);
         System.out.println(res);
+        System.out.println(multiplerides(2,5,5));
     }
 
     public static double totalFare(double dist, int time) {
         double res=dist*perKm + time*perMin;
+        if(res>minFare){
+               return res;
+        }
+        else{
+            return minFare;
+        }
+    }
+    public static double multiplerides(double dist, int time, int rides)
+    {
+        double res=(dist*perKm + time*perMin)*rides;
         if(res>minFare){
             return res;
         }
@@ -19,4 +30,5 @@ public class CabInvoice {
             return minFare;
         }
     }
+
 }
