@@ -13,4 +13,10 @@ public class CabInvoiceTest {
         int actual = (int) cabInvoice.totalFare(distnace,time);
         Assert.assertEquals(20,actual);
     }
+
+    @Test
+    public void multipleRides(){
+        CabInvoice cabInvoice = new CabInvoice();
+        Assert.assertEquals(125,(int)cabInvoice.multiplerides(2,5,50));
+    }
 }
