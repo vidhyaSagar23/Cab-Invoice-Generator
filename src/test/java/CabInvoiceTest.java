@@ -32,4 +32,12 @@ public class CabInvoiceTest {
         CabInvoice cabInvoice = new CabInvoice();
         Assert.assertEquals(75,(int)cabInvoice.invoiceService(2,5,5));
     }
+    @Test
+    public void premium()
+    {
+        CabInvoice cabInvoice = new CabInvoice();
+        Assert.assertEquals(40,(int)cabInvoice.premiumRides("premium",2,5));
+
+    }
+
 }
